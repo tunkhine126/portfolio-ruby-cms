@@ -1,0 +1,13 @@
+<div class="content-wrapper">
+  <h1>Stuff created</h1>
+  <div class="content">
+    <p>Works in progress.....</p>
+    <ul class="projects">
+      <% @projects.each do |project| %>
+        <li>
+          <%= link_to article.project, project_path(project.slug), class: "underlined" %> 
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="content-wrapper">
+  <h1>Stuff I've written</h1>
+  <div class="content">
+    <p>Someday I'd like to start writing again.....</p>
+    <ul class="articles">
+      <% @articles.each do |article| %>
+        <li>
+          <%= link_to article.title, article_path(article.slug), class: "underlined" %> 
+          <time class="code"><%= article.published_at.strftime('%B %e, %Y') %></time>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
