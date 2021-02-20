@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 #A modern, responsive admin framework for Ruby on Rails
 gem 'trestle'
+gem 'trestle-auth'
 gem 'haml-rails', '~> 2.0'
 gem 'simple_form'
 gem 'material-sass', '4.1.1'
