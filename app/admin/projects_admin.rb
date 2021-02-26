@@ -6,16 +6,22 @@ Trestle.resource(:projects) do
   # Customize the table columns shown on the index view.
   #
   table do
-    column :name
+    column :title
     column :created_at, align: :center
+    column :slug
+    column :link_to
     actions
   end
 
   # Customize the form fields shown on the new/edit views.
   #
   form do |project|
-    text_field :name
-  
+    text_field :title
+    text_field :slug
+    text_field :description
+    text_field :link_to
+    text_field :content
+
     row do
       col { datetime_field :updated_at }
       col { datetime_field :created_at }
