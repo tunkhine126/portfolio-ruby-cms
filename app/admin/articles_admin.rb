@@ -6,7 +6,6 @@ Trestle.resource(:articles) do
   # Customize the table columns shown on the index view.
   #
   table do
-    column :name
     column :title
     column :content
     column :created_at, align: :center
@@ -16,8 +15,11 @@ Trestle.resource(:articles) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |article|
-    text_field :name
-  
+    text_field :title
+    text_field :slug
+    text_field :content
+    text_field :link_to
+
     row do
       col { datetime_field :updated_at }
       col { datetime_field :created_at }
