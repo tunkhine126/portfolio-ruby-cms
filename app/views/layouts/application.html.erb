@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tun Khine</title>
+    <title><%= @title ? "#{@title} - Tun Khine" : "Tun Khine" %></title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= favicon_link_tag asset_path('fire_flower.ico') %>
   </head>
 
   <body>
+
+    <div>
+      <header>
+        <h1>Hi, I'm Tun</h1>
+        <p>Software Engineer. Dad. Generalist.</p>
+      </header>
+      <p>&rarr;
+        <%= link_to 'About', about_path %>, <%= link_to 'Articles', articles_path %>, <%= link_to 'Projects', projects_path %>
+      </p>
+    </div>
+
     <%= yield %>
+
+    <footer>
+      Site last updated on <b><%= last_updated.to_datetime.in_time_zone('Eastern Time (US & Canada)').strftime('%B %e, %Y at %l:%M%P %Z') %></b>. <a href="https://github.com/tunkhine126/portfolio-ruby-cms/commits/master" target="_blank">Changelog</a>.
+    </footer>
   </body>
 </html>

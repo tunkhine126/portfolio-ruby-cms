@@ -30,6 +30,7 @@ gem 'haml-rails', '~> 2.0'
 gem 'simple_form'
 gem 'material-sass', '4.1.1'
 gem 'material_icons'
+gem 'httparty'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
