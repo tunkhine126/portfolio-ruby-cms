@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :articles, only: [:index, :show]
   resources :projects, only: [:index, :show]
 
+  get 'about', to: 'landing#about'  
+
 end

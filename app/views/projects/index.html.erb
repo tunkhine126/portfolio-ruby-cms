@@ -5,7 +5,7 @@
     <ul class="projects">
       <% @projects.each do |project| %>
         <li>
-          <%= link_to article.project, project_path(project.slug), class: "underlined" %> 
+          <%= link_to project.title, project_path(project.slug), class: "underlined" %> 
         </li>
       <% end %>
     </ul>
