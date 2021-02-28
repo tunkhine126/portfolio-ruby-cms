@@ -7,6 +7,5 @@ class ArticlesController < ApplicationController
   def show
     @article     = Article.find_by(slug: params[:id])
     @title       = @article.title
-    @description = @article.description
   end
 end

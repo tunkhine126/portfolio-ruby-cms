@@ -7,6 +7,5 @@ class ProjectsController < ApplicationController
   def show
     @project     = Project.find_by(slug: params[:id])
     @title       = @project.title
-    @description = @project.description
   end
 end

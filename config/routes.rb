@@ -6,4 +6,7 @@ Rails.application.routes.draw do
 
   get 'about', to: 'landing#about'  
 
+  match "/404", :to => "errors#page_not_found", :via => :all
+  match "/500", :to => "errors#server_error", :via => :all
+
 end
